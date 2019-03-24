@@ -1,6 +1,6 @@
 ## semaforo-fx
 
-Ejemplo de aplicación con JavaFX para crear un semaforo. 
+Ejemplo de aplicación con JavaFX para crear un semáforo. 
 - Para el ejemplo utilicé Java 11, JPMS, y OpenJFX 11
 
 #### Enlaces Útiles:

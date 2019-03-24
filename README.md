@@ -1,6 +1,6 @@
 ## semaforo-fx
 
-Ejemplo de aplicación con JavaFX para crear un semáforo. 
+Ejemplo de aplicación con JavaFX para crear un semáforo, presionando el boton auto avanza automaticamente, presionando el click izquierdo del mouse se mueve en forma manual. 
 - Para el ejemplo utilicé Java 11, JPMS, y OpenJFX 11
 
 #### Enlaces Útiles:
@@ -24,7 +24,7 @@ mvn compile exec:java
 ~~~~
 mvn clean compile package
 ~~~~
-- Luego de compilarla lanzarla con (se incluyen las librerias requeridas desde el SDK de JFX):
+- Luego de compilarla se puede lanzarla con lo siguiente (se incluyen las librerias requeridas desde el SDK de JFX, cambiar el path por el adecuado):
 ~~~~
 java --module-path  target/semaforo-fx-1.0-SNAPSHOT.jar:/home/sebastian/java/jdk/openjfx/lib/javafx.graphics.jar:/home/sebastian/java/jdk/openjfx/lib/javafx.fxml.jar:/home/sebastian/java/jdk/openjfx/lib/javafx.base.jar:/home/sebastian/java/jdk/openjfx/lib/javafx.controls.jar  --module com.sebastian.semaforo.fx/com.sebastian.semaforo.fx.SemaforoFX 
 ~~~~

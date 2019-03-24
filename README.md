@@ -5,8 +5,11 @@ Ejemplo de aplicación con JavaFX para crear un semáforo.
 
 #### Enlaces Útiles:
 OpenJFX: [https://openjfx.io](https://openjfx.io)
+
 SDK JFX: [https://gluonhq.com/products/javafx/](https://gluonhq.com/products/javafx/)
+
 OpenJDK: [https://jdk.java.net/11/](https://jdk.java.net/11/)
+
 SceneBuilder: [https://gluonhq.com/products/scene-builder/](https://gluonhq.com/products/scene-builder/)
 
 #### Antes de Empezar

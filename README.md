@@ -26,7 +26,7 @@ mvn clean compile package
 ~~~~
 - Luego de compilarla se puede lanzarla con lo siguiente (se incluyen las librerias requeridas desde el SDK de JFX, cambiar el path por el adecuado):
 ~~~~
-java --module-path  target/semaforo-fx-1.0-SNAPSHOT.jar:/home/sebastian/java/jdk/openjfx/lib/javafx.graphics.jar:/home/sebastian/java/jdk/openjfx/lib/javafx.fxml.jar:/home/sebastian/java/jdk/openjfx/lib/javafx.base.jar:/home/sebastian/java/jdk/openjfx/lib/javafx.controls.jar  --module com.sebastian.semaforo.fx/com.sebastian.semaforo.fx.SemaforoFX 
+java --module-path  target/semaforo-fx-1.0-SNAPSHOT.jar:target/lib/  --module com.sebastian.semaforo.fx/com.sebastian.semaforo.fx.SemaforoFX
 ~~~~
 
 > Como indiqué al comienzo, es requerido leer la documentación para poder saber más de JavaFX y poder instalar los requerimientos

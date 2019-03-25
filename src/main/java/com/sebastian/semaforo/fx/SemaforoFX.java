@@ -23,8 +23,8 @@ public class SemaforoFX extends Application {
 
   @Override
   public void start(Stage primaryStage) throws IOException {
-    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource(
-            "semaforo.fxml"));
+    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader()
+            .getResource("semaforo.fxml"));
     primaryStage.setTitle("Semaforo");
     final Scene scene = new Scene(loader.load());
     ReceptorEventos controller = loader.getController();

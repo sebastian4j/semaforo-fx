@@ -42,7 +42,21 @@
                 <configuration>
                     <mainClass>com.sebastian.semaforo.fx.SemaforoFX</mainClass>
                 </configuration>
-            </plugin>            
+            </plugin>  
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>          
         </plugins>
     </build>
 </project>

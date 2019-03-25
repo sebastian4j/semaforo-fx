@@ -2,7 +2,6 @@ package com.sebastian.semaforo.fx;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
@@ -18,46 +17,16 @@ import javafx.scene.shape.Circle;
  * @author Sebastián Ávila A.
  */
 public class SemaforoController implements Initializable, ReceptorEventos {
-
-  class Automatizador implements Runnable {
-    private boolean activado;
-
-    void definir(boolean activado) {
-      this.activado = activado;
-    }
-
-    boolean estaActivado() {
-      return activado;
-    }
-
-    @Override
-    public void run() {
-      while (true) {
-        if (estaActivado()) {
-          recibir(MouseEvent.MOUSE_CLICKED);
-        }
-        try {
-          Thread.sleep(2000);
-        } catch (InterruptedException e) {
-          e.printStackTrace();
-        }
-      }
-    }
-
-  }
   @FXML
   private Circle rojo;
   @FXML
   private Circle amarillo;
   @FXML
   private Circle verde;
-
   private int presionados = 0;
-
   @FXML
   private Pane semaforo;
 
-  private Automatizador auto = new Automatizador();
 
   /**
    * Initializes the controller class.
@@ -69,9 +38,6 @@ public class SemaforoController implements Initializable, ReceptorEventos {
     amarillo.setFill(Color.GRAY);
     semaforo.setFocusTraversable(true);
     semaforo.requestFocus();
-    var r = new Thread(auto);
-    r.setDaemon(false);
-    r.start();
   }
 
   private void recibir(EventType evento) {
@@ -103,15 +69,6 @@ public class SemaforoController implements Initializable, ReceptorEventos {
   @Override
   public void recibir(Event evento) {
     recibir(evento.getEventType());
-  }
-
-  @FXML
-  private void automatico(ActionEvent event) {
-    if (!auto.estaActivado()) {
-      auto.definir(true);
-    } else {
-      auto.definir(false);
-    }
   }
 
 }
